@@ -1,0 +1,199 @@
+/* ===========================
+   LAKME – Global CSS System
+   =========================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color Palette */
+  --color-ivory:      #faf8f5;
+  --color-cream:      #f5f0e8;
+  --color-white:      #ffffff;
+  --color-gold:       #c9a84c;
+  --color-gold-light: #e4cfa0;
+  --color-gold-dark:  #a07830;
+  --color-charcoal:   #1a1a1a;
+  --color-slate:      #3d3d3d;
+  --color-muted:      #8a8378;
+  --color-border:     #e8e2d9;
+  --color-surface:    #f0ece4;
+
+  /* Typography */
+  --font-display:  'Cormorant Garamond', Georgia, serif;
+  --font-body:     'Jost', -apple-system, sans-serif;
+
+  /* Spacing */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   2rem;
+  --space-lg:   4rem;
+  --space-xl:   7rem;
+
+  /* Transitions */
+  --transition-fast:   0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-slow:   0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* Shadows */
+  --shadow-soft:   0 4px 30px rgba(0,0,0,0.06);
+  --shadow-medium: 0 8px 40px rgba(0,0,0,0.10);
+  --shadow-strong: 0 16px 60px rgba(0,0,0,0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ── Utility Classes ── */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: var(--color-charcoal);
+  line-height: 1.15;
+}
+
+.section-subheading {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--color-charcoal);
+  color: var(--color-charcoal);
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: color var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-charcoal);
+  transform: translateY(100%);
+  transition: transform var(--transition-smooth);
+  z-index: -1;
+}
+
+.btn:hover {
+  color: var(--color-white);
+}
+
+.btn:hover::before {
+  transform: translateY(0);
+}
+
+.btn--gold {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn--gold::before {
+  background: var(--color-gold);
+}
+
+.btn--gold:hover {
+  color: var(--color-white);
+}
+
+.btn--filled {
+  background: var(--color-charcoal);
+  color: var(--color-white);
+}
+
+.btn--filled::before {
+  background: var(--color-gold);
+}
+
+.btn--filled:hover {
+  color: var(--color-white);
+  border-color: var(--color-gold);
+}
+
+.gold-line {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--color-gold);
+  margin: var(--space-sm) 0;
+}
+
+/* ── Scroll animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+}
