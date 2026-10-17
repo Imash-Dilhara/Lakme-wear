@@ -1,5 +1,7 @@
 import './Footer.css';
 
+import logo from '../assets/logo-with-name.png';
+
 const LINKS = {
   Shop:    ['New Arrivals', 'Evening Wear', 'Day Wear', 'Office Couture', 'Sale'],
   Company: ['Our Story', 'Sustainability', 'Careers', 'Press'],
@@ -21,11 +23,14 @@ export default function Footer() {
         {/* Brand column */}
         <div className="footer__brand">
           <a href="#" className="footer__logo" aria-label="LAKME home">
-            <span className="footer__logo-text">LAKME</span>
-            <span className="footer__logo-sub">Luxury Fashion</span>
+            <img src={logo} alt="Logo Image" />
+            <div className='footer__logo-box'>
+              <span className="footer__logo-text">LAKME</span>
+              <span className="footer__logo-sub">Luxury Fashion</span>
+            </div>
           </a>
           <p className="footer__tagline">
-            Crafting timeless elegance for the modern woman since 2018.
+            Crafting timeless elegance for the modern woman since 2026.
           </p>
           <div className="footer__socials">
             {SOCIALS.map(s => (
@@ -68,11 +73,11 @@ export default function Footer() {
           <ul className="footer__contact-list">
             <li>
               <span className="footer__contact-label">Store</span>
-              <span>42 Galle Road, Colombo 03</span>
+              <span>Galle Road, Gintota, Galle</span>
             </li>
             <li>
               <span className="footer__contact-label">Email</span>
-              <a href="mailto:hello@lakme.lk" className="footer__nav-link">hello@lakme.lk</a>
+              <a href="mailto:hello@lakme.lk" className="footer__nav-link">Lakmewear@gmail.com</a>
             </li>
             <li>
               <span className="footer__contact-label">Phone</span>
@@ -86,7 +91,7 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p className="footer__copyright">
-            © {year} LAKME Luxury Fashion. All rights reserved.
+            &copy; {year} LAKME Luxury Fashion. All rights reserved.
           </p>
           <div className="footer__legal">
             <a href="#" id="footer-privacy-link" className="footer__legal-link">Privacy Policy</a>
