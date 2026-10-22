@@ -11,7 +11,8 @@ const LINKS = {
 const SOCIALS = [
   { label: 'Instagram', href: '#', icon: <InstagramIcon /> },
   { label: 'Facebook',  href: '#', icon: <FacebookIcon />  },
-  { label: 'Pinterest', href: '#', icon: <PinterestIcon /> },
+  { label: 'TikTok', href: '#', icon: <TikTokIcon /> },
+  { label: 'Whatsapp', href: '#', icon: <WhatsAppIcon /> },
 ];
 
 export default function Footer() {
@@ -81,7 +82,7 @@ export default function Footer() {
             </li>
             <li>
               <span className="footer__contact-label">Phone</span>
-              <a href="tel:+94112345678" className="footer__nav-link">+94 11 234 5678</a>
+              <a href="tel:+94770510090" className="footer__nav-link">+94 77 051 0090</a>
             </li>
           </ul>
         </div>
@@ -121,10 +122,31 @@ function FacebookIcon() {
   );
 }
 
-function PinterestIcon() {
+function TikTokIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.771 0 3.136-1.866 3.136-4.56 0-2.384-1.714-4.052-4.16-4.052-2.833 0-4.497 2.124-4.497 4.32 0 .856.33 1.772.741 2.273" />
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.5" />
+    </svg>
+  );
+}
+
+function WhatsAppIcon() {
+  return (
+    <svg 
+      width="18" 
+      height="18" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      stroke="currentColor" 
+      strokeWidth="1.5"
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    >
+      {/*Chat Bubble*/}
+      <path d="M22 11.5a9.5 9.5 0 0 1-1 4.3 9.6 9.6 0 0 1-8.6 5.3 9.5 9.5 0 0 1-4.3-1L2 22l1.9-6.4A9.5 9.5 0 0 1 3 11.2a9.6 9.6 0 0 1 5.3-8.6 9.5 9.5 0 0 1 4.3-1h.5a9.5 9.5 0 0 1 8.9 9v.9z" />
+      
+      {/*Phone Receiver*/}
+      <path d="M15.5 12.2c-.2-.2-.5-.2-.7 0l-.6.6c-.2.2-.6.3-.9.1a7 7 0 0 1-2.9-2.9c-.2-.3-.1-.7.1-.9l.6-.6c.2-.2.2-.5 0-.7l-.8-.8c-.2-.2-.5-.2-.7 0a2 2 0 0 0-.6 1.4c0 1.5.9 3.2 2.3 4.6 1.4 1.4 3.1 2.3 4.6 2.3a2 2 0 0 0 1.4-.6l.6-.6c.2-.2.2-.5 0-.7l-.9-.7z" />
     </svg>
   );
 }

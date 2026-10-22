@@ -1,3 +1,5 @@
+import { useState , useEffect } from 'react';
+
 import Navbar       from './components/Navbar';
 import Hero         from './components/Hero';
 import Marquee      from './components/Marquee';
@@ -6,8 +8,19 @@ import Collection   from './components/Collection';
 import Testimonials from './components/Testimonials';
 import Newsletter   from './components/Newsletter';
 import Footer       from './components/Footer';
+import AdminPanel from './components/AdminPanel';
 
 export default function App() {
+  const [pathname , setPathname] = useState('/');
+
+  useEffect(() => {
+    setPathname(window.location.pathname);
+  },[]);
+
+  if(pathname === '/admin'){
+    return <AdminPanel/>;
+  }
+
   return (
     <>
       <Navbar />
