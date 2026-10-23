@@ -340,6 +340,10 @@
   .hero__art-label{
     font-size: 4em;
   }
+
+  .hero__visual{
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 900px) {

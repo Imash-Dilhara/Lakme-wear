@@ -42,3 +42,9 @@
 .marquee-section:hover .marquee-inner {
   animation-play-state: paused;
 }
+
+@media (max-width: 1400px) {
+  .marquee-section{
+    margin-top: 20px;
+  }
+}

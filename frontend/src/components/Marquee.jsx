@@ -2,9 +2,9 @@ import './Marquee.css';
 
 const BRANDS = [
   'Handcrafted', '·', 'Sustainable', '·', 'Premium Quality',
-  '·', 'Free Shipping', '·', 'Made to Order', '·', 'Exclusive Designs',
+  '·', 'Islandwide Delivery', '·', 'Made to Order', '·', 'Exclusive Designs',
   '·', 'Handcrafted', '·', 'Sustainable', '·', 'Premium Quality',
-  '·', 'Free Shipping', '·', 'Made to Order', '·', 'Exclusive Designs',
+  '·', 'Islandwide Delivery', '·', 'Made to Order', '·', 'Exclusive Designs',
 ];
 
 export default function Marquee() {
