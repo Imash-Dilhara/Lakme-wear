@@ -200,14 +200,6 @@
 .hero__art-panel {
   width: 100%;
   height: 100%;
-  /* background: linear-gradient(
-    160deg,
-    #f7f3ec 0%,
-    #ede5d4 25%,
-    #d6c9ad 50%,
-    #c4b48e 75%,
-    #b09870 100%
-  ); */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -220,9 +212,6 @@
 .hero__art-overlay {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 60% 30%, rgba(255,255,255,0.4) 0%, transparent 60%),
-    radial-gradient(ellipse at 30% 80%, rgba(180,150,100,0.3) 0%, transparent 50%);
 }
 
 .hero__art-label {
@@ -250,7 +239,7 @@
 }
 
 .hero__frame-deco--br {
-  bottom: -12px;
+  bottom: -2px;
   right: -12px;
   border-width: 0 2px 2px 0;
 }
@@ -349,6 +338,9 @@
 }
 
 @media (max-width: 900px) {
+  .hero__frame-deco--br{
+    bottom: -8px;
+  }
   .hero__container {
     grid-template-columns: 1fr;
     gap: 2rem;
