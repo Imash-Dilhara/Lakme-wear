@@ -9,9 +9,9 @@ const LINKS = {
 };
 
 const SOCIALS = [
-  { label: 'Instagram', href: '#', icon: <InstagramIcon /> },
-  { label: 'Facebook',  href: '#', icon: <FacebookIcon />  },
-  { label: 'TikTok', href: '#', icon: <TikTokIcon /> },
+  { label: 'Instagram', href: 'https://www.instagram.com/lakme_wear?dlrf=em11czk4bmtnaWNs&utm_source=qr', icon: <InstagramIcon /> },
+  { label: 'Facebook',  href: 'https://www.facebook.com/share/1ZzRaNpA5e/?mibextid=wwXIfr', icon: <FacebookIcon />  },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@lakme.wear?_r=1&_t=ZS-9Amsdg21OCo', icon: <TikTokIcon /> },
   { label: 'Whatsapp', href: '#', icon: <WhatsAppIcon /> },
 ];
 
