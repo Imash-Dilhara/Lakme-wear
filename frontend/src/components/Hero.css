@@ -190,6 +190,7 @@
 }
 
 .hero__image-inner {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -199,19 +200,21 @@
 .hero__art-panel {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     160deg,
     #f7f3ec 0%,
     #ede5d4 25%,
     #d6c9ad 50%,
     #c4b48e 75%,
     #b09870 100%
-  );
+  ); */
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 2rem;
-  position: relative;
+  padding-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero__art-overlay {
@@ -223,13 +226,12 @@
 }
 
 .hero__art-label {
-  position: relative;
-  z-index: 1;
   font-family: var(--font-display);
   font-size: 4rem;
   font-weight: 300;
   letter-spacing: 0.5em;
   color: rgba(255,255,255,0.7);
+  z-index: 10;
 }
 
 /* Frame decoration */

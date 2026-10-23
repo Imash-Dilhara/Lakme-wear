@@ -16,6 +16,9 @@ export default function Hero() {
     happyClient:'2k'
   };
 
+  //Add new design image
+  const New_Design = "./test2.png";
+
   return (
     <section className="hero" id="hero" aria-label="Hero banner">
       {/* Background gradient */}
@@ -73,6 +76,7 @@ export default function Hero() {
         <div className="hero__visual">
           <div className="hero__image-frame">
             <div className="hero__image-inner">
+              <img src={New_Design} alt="Test Image" />
               {/* Gradient art panel instead of real image */}
               <div className="hero__art-panel" aria-hidden="true">
                 <div className="hero__art-overlay" />
