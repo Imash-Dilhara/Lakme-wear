@@ -10,6 +10,12 @@ export default function Hero() {
     setTimeout(() => el.classList.add('hero__content--visible'), 100);
   }, []);
 
+  const fromDB = {
+    exclusiveDesign: 500,
+    collection:20,
+    happyClient:'2k'
+  };
+
   return (
     <section className="hero" id="hero" aria-label="Hero banner">
       {/* Background gradient */}
@@ -47,17 +53,17 @@ export default function Hero() {
 
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num">500+</span>
+              <span className="hero__stat-num">{fromDB.exclusiveDesign}+</span>
               <span className="hero__stat-label">Exclusive Designs</span>
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num">12</span>
+              <span className="hero__stat-num">{fromDB.collection}</span>
               <span className="hero__stat-label">Collections</span>
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num">50k+</span>
+              <span className="hero__stat-num">{fromDB.happyClient}+</span>
               <span className="hero__stat-label">Happy Clients</span>
             </div>
           </div>
@@ -81,15 +87,9 @@ export default function Hero() {
           <div className="hero__badge" aria-label="New arrival">
             <span className="hero__badge-line">New</span>
             <span className="hero__badge-main">Arrival</span>
-            <span className="hero__badge-season">SS 2025</span>
+            <span className="hero__badge-season">2025</span>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="hero__scroll" aria-label="Scroll down">
-        <span className="hero__scroll-text">Scroll</span>
-        <div className="hero__scroll-line" />
       </div>
     </section>
   );
