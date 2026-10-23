@@ -36,7 +36,7 @@ export default function Navbar() {
         </nav>
 
         {/* Logo */}
-        <a href="#" className="navbar__logo" aria-label="LAKME home">
+        <a href="/" className="navbar__logo" aria-label="LAKME home">
           <img src={logo} alt="Logo image" />
           <div className='navbar-logo-box'>
             <span className="navbar__logo-text">LAKME</span>
