@@ -1,7 +1,7 @@
 /* ── FeaturedProducts.css ── */
 
 .products {
-  padding: var(--space-xl) 0;
+  padding: var(--space-lg) 0;
   background: var(--color-ivory);
 }
 

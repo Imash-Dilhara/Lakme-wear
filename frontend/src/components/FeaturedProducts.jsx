@@ -5,35 +5,37 @@ const PRODUCTS = [
   {
     id: 1,
     name: 'Ivory Silk Gown',
-    category: 'Evening Wear',
+    category: 'Casual Wear',
     price: 24800,
     badge: 'New',
     gradient: 'linear-gradient(145deg, #f7f0e6 0%, #e8d9c0 50%, #d4bc95 100%)',
+    src: './test1.png',
   },
   {
     id: 2,
     name: 'Cream Blazer Set',
-    category: 'Office Couture',
+    category: 'Office Wear',
     price: 18500,
     badge: 'Best Seller',
     gradient: 'linear-gradient(145deg, #f0ece2 0%, #ddd5c0 50%, #c4b898 100%)',
+    src: './test2.png',
   },
-  {
-    id: 3,
-    name: 'Midnight Gown',
-    category: 'Evening Wear',
-    price: 32000,
-    badge: 'Limited',
-    gradient: 'linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 50%, #0d0d0d 100%)',
-  },
-  {
-    id: 4,
-    name: 'Pearl Midi Dress',
-    category: 'Day Wear',
-    price: 16900,
-    badge: null,
-    gradient: 'linear-gradient(145deg, #faf5ec 0%, #ede3cc 50%, #daccb0 100%)',
-  },
+  // {
+  //   id: 3,
+  //   name: 'Midnight Gown',
+  //   category: 'Casual Wear',
+  //   price: 32000,
+  //   badge: 'Limited',
+  //   gradient: 'linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 50%, #0d0d0d 100%)',
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Pearl Midi Dress',
+  //   category: 'Party Wear',
+  //   price: 16900,
+  //   badge: null,
+  //   gradient: 'linear-gradient(145deg, #faf5ec 0%, #ede3cc 50%, #daccb0 100%)',
+  // },
 ];
 
 const SIZES = ['XS', 'S', 'M', 'L', 'XL'];
@@ -44,7 +46,7 @@ export default function FeaturedProducts() {
   const [quickView,    setQuickView]    = useState(null);
   const sectionRef = useRef(null);
 
-  const filters = ['All', 'Evening Wear', 'Office Couture', 'Day Wear'];
+  const filters = ['All', 'Casual Wear' , 'Party Wear' ,  'Office Wear' ];
 
   const filtered = activeFilter === 'All'
     ? PRODUCTS
@@ -114,7 +116,7 @@ export default function FeaturedProducts() {
                   style={{ background: product.gradient }}
                   aria-hidden="true"
                 >
-                  <span className="product-card__brand-mark">L</span>
+                  <img src={product.src} alt="L" />
                 </div>
 
                 {product.badge && (
