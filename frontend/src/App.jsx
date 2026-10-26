@@ -8,7 +8,7 @@ import Collection   from './components/Collection';
 import Testimonials from './components/Testimonials';
 import Newsletter   from './components/Newsletter';
 import Footer       from './components/Footer';
-import AdminPanel from './components/AdminPanel';
+import AdminPanel_login from './components/AdminPanel_login';
 
 export default function App() {
   const [pathname , setPathname] = useState('/');
@@ -18,7 +18,7 @@ export default function App() {
   },[]);
 
   if(pathname === '/admin'){
-    return <AdminPanel/>;
+    return <AdminPanel_login/>;
   }
 
   return (

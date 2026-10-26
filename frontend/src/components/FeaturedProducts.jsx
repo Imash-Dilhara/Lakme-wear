@@ -116,7 +116,7 @@ export default function FeaturedProducts() {
                   style={{ background: product.gradient }}
                   aria-hidden="true"
                 >
-                  <img src={product.src} alt="L" />
+                  <img src={product.src} alt="Design Images" />
                 </div>
 
                 {product.badge && (

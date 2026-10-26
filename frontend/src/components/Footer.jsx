@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="footer__top container">
         {/* Brand column */}
         <div className="footer__brand">
-          <a href="/" className="footer__logo" aria-label="LAKME home">
+          <a href="#" className="footer__logo" aria-label="LAKME home">
             <img src={logo} alt="Logo Image" />
             <div className='footer__logo-box'>
               <span className="footer__logo-text">LAKME</span>
