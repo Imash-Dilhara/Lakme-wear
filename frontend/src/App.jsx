@@ -17,9 +17,6 @@ export default function App() {
     setPathname(window.location.pathname);
   },[]);
 
-  //remove this
-  console.log('Path name : ' , pathname);
-
   if(pathname === '/admin'){
     return <AdminPanel_login/>;
   }
