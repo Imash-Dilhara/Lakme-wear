@@ -1,0 +1,52 @@
+.admin-panel-main-box{
+    display: flex;
+    background-color: var(--color-cream);
+    width: 100%;
+    height: 100vh;
+}
+
+.admin-category-panel-box{
+    padding: 40px 10px;
+    background-color: black;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-category-panel-box h1{
+    color: var(--color-gold-dark);
+    letter-spacing: 1rem;
+}
+
+.admin-category-panel-box hr{
+    width: 80%;
+    height: 1px;
+    border: none;
+    background-color: var(--color-slate);
+}
+
+.category-link-box{
+    width: 100%;
+    color: white;
+}
+
+.category-link-box p{
+    padding: 5px 40px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.category-link-box p:hover{
+    background-color: var(--color-gold-dark);
+    letter-spacing: 2px;
+}
+
+.category-link-box p.active{
+    color: var(--color-gold);
+}
+
+.admin-category-content-box{
+    background-color: var(--color-cream);
+}
