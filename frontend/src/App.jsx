@@ -8,8 +8,7 @@ import Collection   from './components/Collection';
 import Testimonials from './components/Testimonials';
 import Newsletter   from './components/Newsletter';
 import Footer       from './components/Footer';
-import AdminPanel_login from './components/AdminPanel_login';
-
+import AdminPanel_login from './admin/AdminPanel_login';
 export default function App() {
   const [pathname , setPathname] = useState('/');
 
