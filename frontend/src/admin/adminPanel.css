@@ -67,18 +67,18 @@
     color: white;
 }
 
-.category-link-box p{
+.category-link-box a{
     padding: 5px 40px;
     cursor: pointer;
     transition: var(--transition-smooth);
 }
 
-.category-link-box p:hover{
+.category-link-box a:hover{
     background-color: var(--color-gold-dark);
     letter-spacing: 2px;
 }
 
-.category-link-box p.active{
+.category-link-box a.active{
     color: var(--color-gold);
 }
 
@@ -101,7 +101,7 @@
         letter-spacing: 0.4rem;
     }
 
-    .category-link-box p{
+    .category-link-box a{
         letter-spacing: 1px;
     }
 }
@@ -145,7 +145,7 @@
         padding-top: 10px;
     }
 
-    .category-link-box p{
+    .category-link-box a{
         padding: 10px 20px;
     }
 }
