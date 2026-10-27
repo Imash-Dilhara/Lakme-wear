@@ -177,9 +177,6 @@
 
 /* Small phones */
 @media (max-width: 480px) {
-    .admin-login-panel-box {
-        padding: 12px;
-    }
 
     .form-box {
         padding: 25px 18px;

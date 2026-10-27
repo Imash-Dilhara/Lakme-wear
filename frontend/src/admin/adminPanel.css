@@ -15,8 +15,40 @@
     gap: 20px;
 }
 
+.admin-panel-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span{
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2){
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .admin-category-panel-box h1{
-    color: var(--color-gold-dark);
+    color: var(--color-gold);
     letter-spacing: 1rem;
 }
 
@@ -28,6 +60,9 @@
 }
 
 .category-link-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
     color: white;
 }
@@ -49,4 +84,73 @@
 
 .admin-category-content-box{
     background-color: var(--color-cream);
+}
+
+/* Laptop / small desktop */
+@media (max-width: 1400px) {
+    
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .admin-category-panel-box{
+        width: 25%;
+    }
+
+    .admin-category-panel-box h1{
+        letter-spacing: 0.4rem;
+    }
+
+    .category-link-box p{
+        letter-spacing: 1px;
+    }
+}
+
+/* Large phone / small tablet */
+@media (max-width: 768px) {
+
+        .admin-panel-main-box{
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .admin-category-panel-box{
+        width: 100%;
+        height: auto;
+        padding: 20px 20px;
+        gap: 10px;
+    }
+
+    .admin-panel-header{
+        justify-content: space-around;
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .category-link-box{
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        gap: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+
+    .category-link-box.show{
+        max-height: 400px;
+        opacity: 1;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    .category-link-box p{
+        padding: 10px 20px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 520px) {
+
 }
