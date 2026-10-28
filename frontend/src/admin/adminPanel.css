@@ -131,10 +131,13 @@
     }
 
     .category-link-box{
+        position: absolute;
         max-height: 0;
         overflow: hidden;
         opacity: 0;
         gap: 0;
+        background-color: black;
+        margin-top: 70px;
         transition: max-height 0.4s ease, opacity 0.3s ease;
     }
 
@@ -143,6 +146,7 @@
         opacity: 1;
         gap: 10px;
         padding-top: 10px;
+        z-index: 10;
     }
 
     .category-link-box a{
