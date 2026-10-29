@@ -26,6 +26,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    background-color: #f6f2ec;
+    transition: 0.4s;
+}
+
+.add-arrival-design-image-box:hover{
+    border: 2px solid var(--color-gold-light);
+    background-color: rgba(213, 184, 129, 0.1);
+}
+
+.uploadImage{
+    display: none;
 }
 
 .arrival-design-content-box button{
