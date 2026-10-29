@@ -1,0 +1,45 @@
+.arrival-design-main-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.arrival-design-main-box h1{
+    color: var(--color-gold);
+}
+
+.arrival-design-content-box{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-arrival-design-image-box{
+    width: 80%;
+    height: 300px;
+    border: 2px dashed var(--color-gold-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrival-design-content-box button{
+    width: 30%;
+    padding: 5px ;
+    background-color: var(--color-gold);
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.4s;
+}
+
+.arrival-design-content-box button:hover{
+    background-color: var(--color-gold-dark);
+    box-shadow: var(--shadow-strong);
+    letter-spacing: 1px;
+}

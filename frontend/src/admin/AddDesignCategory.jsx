@@ -1,5 +1,5 @@
 export default function AddDesignCategory(){
-    return <>
-        <h1>This is Add Design Category</h1>
-    </>
+    return <div id="design-category" className="design-type-main-box">
+        <h1>This is design types</h1>
+    </div>
 }
