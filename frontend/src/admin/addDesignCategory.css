@@ -1,0 +1,78 @@
+.design-type-main-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+}
+
+.design-type-main-box h1{
+    color: var(--color-gold);
+}
+
+.creat-type-content-box{
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    gap: 10px;
+}
+
+.creat-type-content-box input{
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--color-gold-light);
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.676);
+    transition: 0.3s;
+}
+
+.creat-type-content-box input:focus{
+    background-color: #e4cea04e;
+    border-color: var(--color-gold-dark);
+}
+
+.creat-type-content-box button{
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.616);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: var(--shadow-medium);
+    transition: 0.3s;
+}
+
+.category-content-box{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.type-box{
+    display: flex;
+    gap: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: var(--shadow-medium);
+    background-color: rgba(255, 255, 255, 0.616);
+    text-align: top;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.type-box p{
+    font-size: 12px;
+    display: none;
+}
+
+.type-box:hover , .creat-type-content-box button:hover{
+    background-color: white;
+    box-shadow: var(--shadow-strong);
+}
+
+.type-box:hover p{
+    display: contents;
+    color: red;
+}
