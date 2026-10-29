@@ -14,6 +14,11 @@ export default function ArrivalDesign(){
             setPreviewURL(URL.createObjectURL(file));
         }
     };
+
+    const handleUploadFile = () => {
+        setUploadImage(null);
+        setPreviewURL(null);
+    };
     
     return <div id='arrival-design' className="arrival-design-main-box">
         
@@ -42,7 +47,7 @@ export default function ArrivalDesign(){
                 className='uploadImage'
                 onChange={handleFile}/>
 
-            <button>Add Arrival</button>
+            <button onClick={handleUploadFile}>Add Arrival</button>
         </div>
     </div>
 }
