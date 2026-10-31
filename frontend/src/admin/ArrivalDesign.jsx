@@ -34,10 +34,9 @@ export default function ArrivalDesign(){
                         backgroundPosition:'center',
                         border: previewURL ? 'none' : ''
                     }}>
-                    <p>Upload Image for Arrival</p>
-                    {uploadImage && (
-                        <h2>File : {uploadImage.name}</h2>
-                    )}
+                    
+                    
+                    {uploadImage ?  (<h2>File : {uploadImage.name}</h2>) : (<p>Upload Image for Arrival</p>)}
             </label>
             <input 
                 id='uploadImage'

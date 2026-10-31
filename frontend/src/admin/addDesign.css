@@ -1,0 +1,134 @@
+.add-design-main-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px ;
+}
+
+.add-design-main-box h1{
+    color: var(--color-gold);
+}
+
+.content-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.image-box{
+    width: 250px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--color-gold-light);
+    background-color: rgba(255, 255, 255, 0.297);
+    transition: 0.4s;
+}
+
+.image-box label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.image-box:hover{
+    border: 2px solid var(--color-gold);
+    background-color: rgba(215, 203, 142, 0.098);
+}
+
+.image-box input{
+    display: none;
+}
+
+.design-details-box{
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    gap: 20px;
+}
+
+.design-info-box{
+    display: grid;
+    grid-template-columns: 20% 5% 60%;
+    align-items: center;
+}
+
+.design-details-box label{
+    width: 140px;
+    color: #333;
+}
+
+.design-details-box input{
+    font-size: 14px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--color-gold-light);
+    transition: 0.3s;
+}
+
+.design-details-box input:focus , .design-details-box input:hover{
+    border-color: var(--color-gold-dark);
+    background-color: #e4cea037;
+}
+
+.design-details-box input[type="number"]::-webkit-outer-spin-button,
+.design-details-box input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.design-details-box select{
+    padding: 5px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--color-gold-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.design-details-box select:focus , .design-details-box select:hover{
+    background-color: #e4cea037;
+    border-color: var(--color-gold-dark);
+}
+
+.btn-box{
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    padding-left: 10px;
+    gap: 50px;
+}
+
+.add-design-btn , .clear-design-btn{
+    padding: 10px 20px;
+    background-color: var(--color-gold-light);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+.add-design-btn:hover{
+    background-color: var(--color-gold-dark);
+}
+
+.clear-design-btn{
+    background-color: rgba(122, 2, 2, 0.619);
+}
+
+.clear-design-btn:hover{
+    background-color: rgb(95, 0, 0);
+}

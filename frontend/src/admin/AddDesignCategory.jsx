@@ -5,7 +5,15 @@ import { useState } from 'react';
 export default function AddDesignCategory(){
 
     const [addingType , setAddingType] = useState('');
-    const [types , setTypes] = useState(['Casual Wear' , 'Party Wear' , 'Office Wear']);
+    const [types , setTypes] = useState([
+        'Casual Wear' ,
+        'Party Wear' , 
+        'Office Wear' , 
+        'Formal Wear' , 
+        'Sports Wear' , 
+        'Lounge Wear' , 
+        'Maternty Wear',
+    ]);
 
     const handleCategory = () => {
         if(addingType.trim() !== ''){

@@ -46,6 +46,7 @@
     width: 100%;
     display: flex;
     margin-top: 20px;
+    flex-wrap: wrap;
     padding: 0 20px;
     gap: 40px;
 }
@@ -55,6 +56,8 @@
     gap: 15px;
     padding: 5px 10px;
     border-radius: 5px;
+    white-space: nowrap;
+    width: max-content;
     box-shadow: var(--shadow-medium);
     background-color: rgba(255, 255, 255, 0.616);
     text-align: top;
@@ -64,7 +67,8 @@
 
 .type-box p{
     font-size: 12px;
-    display: none;
+    opacity: 0;
+    transition: 0.3s;
 }
 
 .type-box:hover , .creat-type-content-box button:hover{
@@ -73,6 +77,6 @@
 }
 
 .type-box:hover p{
-    display: contents;
+    opacity: 1;
     color: red;
 }
