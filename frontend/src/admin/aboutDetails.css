@@ -1,11 +1,72 @@
 .about-main-box{
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 .about-main-box h1{
     color: var(--color-gold);
+}
+
+.about-content-box{
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.about-details{
+    display: grid;
+    grid-template-columns: 25% 5% 60%;
+}
+
+.about-details input{
+    padding: 5px 20px;
+    outline: none;
+    border: 1px solid var(--color-gold-light);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.about-details input:focus , .about-details input:hover{
+    border-color: var(--color-gold-dark);
+    background-color: #e4cea037;
+}
+
+.btn-field{
+    display: flex;
+    gap: 20px;
+    padding: 10px 30px;
+}
+
+.save-btn , .clear-btn{
+    width: 100px;
+    padding: 5px;
+    background-color: var(--color-gold-light);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.clear-btn{
+    background-color: rgba(122, 2, 2, 0.619);
+}
+
+.save-btn:hover{
+    background-color: var(--color-gold-dark);
+    letter-spacing: 2px;
+}
+
+.clear-btn:hover{
+    background-color: rgb(95, 0, 0);
+    letter-spacing: 2px;
 }
