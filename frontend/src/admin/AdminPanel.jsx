@@ -7,13 +7,14 @@ import About from './AboutDetails';
 
 import { useState } from 'react';
 import EditPanel from './EditPanel';
+import AddEditPanel from './AddEditPanel';
 
 export default function AdminPanel(){
 
     const [activeCategory , setActiveCategory] = useState('Dashboard');
     const [menuOpen , setMenuOpen] = useState(false);
     const [selectedDesign , setSelectedDesign] = useState(null);
-    const [addDesign , setAddDesign] = useState(null);
+    const [addDesign , setAddDesign] = useState([]);
 
     const categoryItems = [
         {id: 1 , name: 'Dashboard' , link: '#dashboard'},
@@ -58,7 +59,7 @@ export default function AdminPanel(){
                 <Dashboard onDesignSelect={setSelectedDesign} selectedDesign={selectedDesign}/>
                 <ArrivalDesign />
                 <AddDesignCategory />
-                <AddDesign />
+                <AddDesign addDesign={addDesign} setAddDesign={setAddDesign} />
                 <About />
         </div>
 
@@ -70,7 +71,9 @@ export default function AdminPanel(){
             <h3>Edit Slide</h3>
             {selectedDesign ? (
                 <EditPanel setSelectedDesign={setSelectedDesign} selectedDesign={selectedDesign}/>
-            ):addDesign ? ('') : (
+            ):addDesign.length !== 0 ? (
+                <AddEditPanel addDesign={addDesign} setAddDesign={setAddDesign}/>
+            ) : (
                 <div className="selected-design">
                     <p>No products yet. Select designs or Upload an designs and add your first piece</p>
                 </div>

@@ -5,7 +5,7 @@ import { useState } from 'react';
 const banners = ['NEW' , 'BEST SELLER' , 'DISCOUNT' , 'SOLD OUT' , 'LIMITED EDITION' , 'TRENDING' , 'PRE-ORDER' , 'RESTOCKED' , 'CLEARANCE' , 'ONLY A FEW LEFT'];
 const designTypes = ['Casual Wear' , 'Party Wear' , 'Office Wear' , 'Formal Wear' , 'Sports Wear' , 'Lounge Wear' , 'Maternty Wear'];
 
-export default function AddDesign(){
+export default function AddDesign({addDesign , setAddDesign}){
 
     const [uplaodImage , setUploadImage] = useState(null);
     const [previewURL , setPreviewURL] = useState(null);
@@ -14,14 +14,19 @@ export default function AddDesign(){
         price: 0.00,
         designType: designTypes[0],
         designBanner: 'None',
+        imageFile: null,
+        url: null,
     });
 
     const handleUploadImage = (e) => {
         if(e.target.files && e.target.files[0]){
             const file = e.target.files[0];
 
+            const url = URL.createObjectURL(file);
+
             setUploadImage(file);
-            setPreviewURL(URL.createObjectURL(file));
+            setPreviewURL(url);
+            setAddDesignDetails((prev) => ({...prev , imageFile: file , url:url}));
         }
     }
 
@@ -37,12 +42,23 @@ export default function AddDesign(){
     const handleClearBtn = () => {
         setUploadImage(null);
         setPreviewURL(null);
+        setAddDesign(null);
         setAddDesignDetails({designName: '' , price: 0.00 , designType: designTypes[0] , designBanner: 'None',});
     }
 
     const handleAddDesign = () => {
         if(addDesignDetails.designName.trim() !== '' && addDesignDetails.price !== 0.00 && uplaodImage){
-            console.log("Add Design Details : " ,uplaodImage.name,addDesignDetails);
+            setAddDesign([...addDesign , addDesignDetails]);
+            setAddDesignDetails({
+                designName: '',
+                price: 0.00,
+                designType: designTypes[0],
+                designBanner: 'None',
+                imageFile: null,
+                url:null,
+            });
+            setUploadImage(null);
+            setPreviewURL(null);
         }
     }
 
@@ -124,7 +140,7 @@ export default function AddDesign(){
                 </div>
                 <div className='btn-box'>
                     <button className="clear-design-btn" onClick={handleClearBtn}>Clear</button>
-                    <button className="add-design-btn" onClick={handleAddDesign}>Add Design</button>
+                    <button className="add-design-btn" onClick={handleAddDesign}>Add To Slot</button>
                 </div>
             </div>
         </div>
