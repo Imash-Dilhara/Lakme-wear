@@ -59,10 +59,13 @@ export default function About(){
                 <label htmlFor="admin-telNo">Phone number</label>
                 <span> : </span>
                 <input 
-                    type="number" 
+                    type="tel" 
                     id="admin-telNo" 
                     name='phoneNumber' 
                     placeholder={placeholder.phoneNumber}
+                    onFocus={() => {
+                        if(aboutDetails.phoneNumber === '') setAboutDetails({...aboutDetails , phoneNumber: '+94'});
+                    }}
                     value={aboutDetails.phoneNumber}
                     onChange={handleChange}/>
             </div>
