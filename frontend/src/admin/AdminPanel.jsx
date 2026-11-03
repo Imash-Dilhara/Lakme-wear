@@ -13,6 +13,7 @@ export default function AdminPanel(){
     const [activeCategory , setActiveCategory] = useState('Dashboard');
     const [menuOpen , setMenuOpen] = useState(false);
     const [selectedDesign , setSelectedDesign] = useState(null);
+    const [addDesign , setAddDesign] = useState(null);
 
     const categoryItems = [
         {id: 1 , name: 'Dashboard' , link: '#dashboard'},
@@ -66,13 +67,14 @@ export default function AdminPanel(){
         </div>
 
         <div className="selected-content-box">
-            <h3>Edit slid</h3>
-            {!selectedDesign ? (
+            <h3>Edit Slide</h3>
+            {selectedDesign ? (
+                <EditPanel setSelectedDesign={setSelectedDesign} selectedDesign={selectedDesign}/>
+            ):addDesign ? ('') : (
                 <div className="selected-design">
                     <p>No products yet. Select designs or Upload an designs and add your first piece</p>
                 </div>
-            ):(
-                <EditPanel setSelectedDesign={setSelectedDesign} selectedDesign={selectedDesign}/>)}
+            )}
         </div>
     </div>
 }

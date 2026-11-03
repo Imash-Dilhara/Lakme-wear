@@ -3,6 +3,25 @@
     flex-direction: column;
 }
 
+.edited-content-box input , .edited-content-box select{
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--color-gold-light);
+    transition: 0.4s;
+}
+
+.edited-content-box input:focus , .edited-content-box input:hover , .edited-content-box select:hover , .edited-content-box select:focus{
+    border: 1px solid var(--color-gold-dark);
+    background-color: #d2be6f1b;
+}
+
+.edited-content-box input[type="number"]::-webkit-outer-spin-button,
+.edited-content-box input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 .button-box{
     width: 100%;
     display: flex;
@@ -12,7 +31,7 @@
 .remove-btn , .change-btn{
     width: 70%;
     padding: 5px 0;
-    background-color: rgb(170, 0, 0);
+    background-color: rgba(91, 1, 1, 0.575);
     color: white;
     border-radius: 5px;
     margin-top: 10px;
@@ -20,15 +39,15 @@
 }
 
 .change-btn{
-    background-color: var(--color-gold-dark);
+    background-color: var(--color-gold-light);
 }
 
 .change-btn:hover{
-    background-color: var(--color-gold);
+    background-color: var(--color-gold-dark);
     letter-spacing: 1px;
 }
 
 .remove-btn:hover{
-    background-color: red;
+    background-color: rgb(86, 1, 1);
     letter-spacing: 1px;
 }

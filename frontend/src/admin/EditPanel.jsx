@@ -3,6 +3,8 @@ import { useState } from "react";
 import './editPanel.css';
 
 export default function EditPanel({setSelectedDesign , selectedDesign}){
+    
+    const [isChanged, setIsChanged] = useState(false);
 
     const typeOfWear = [
         {id:1 , value: 'Casual Wear'},
@@ -19,14 +21,19 @@ export default function EditPanel({setSelectedDesign , selectedDesign}){
     const handleChanges = (e) => {
         const {name , value} = e.target;
         setSelectedDesign((prev) => ({...prev , [name]: value}));
+        setIsChanged(true);
     }
 
     const handleChnageDesignDetails = () => {
-        alert('Design details changed successfully');
+        if(isChanged){
+            alert('Design details changed successfully');
+            setIsChanged(false);
+        }
     }
 
     const handleRemove = () => {
         setSelectedDesign(null);
+        setIsChanged(false);
     }
 
     return <div className='edited-content-box'>
