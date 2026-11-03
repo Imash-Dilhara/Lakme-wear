@@ -42,3 +42,19 @@
     background-color: rgba(86, 0, 0, 0.8);
     letter-spacing: 1px;
 }
+
+.btn-box{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.submit-btn{
+    width: 60%;
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--color-gold-light);
+    border-radius: 5px;
+    color: white;
+}
+
