@@ -29,7 +29,9 @@ export default function AddEditPanel({addDesign , setAddDesign}) {
             </div>
         </div>)}
 
-        <hr className="edit-panel-line"/>
+        <div className="horizontal-line-box">
+            <hr className="edit-panel-line"/>
+        </div>
 
         <div className="btn-box">
             <button className="clr-btn">Clear All</button>
