@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import './addEditPanel.css';
 
 export default function AddEditPanel({addDesign , setAddDesign}) {
@@ -10,6 +8,11 @@ export default function AddEditPanel({addDesign , setAddDesign}) {
         setAddDesign(temp);
     }
 
+    const handleClearAll = () => {
+        const agree = confirm("Do you want to clear all!");
+
+        if(agree) setAddDesign([]);
+    }
     
 
     return <div className="add-design-to-editpanel-main-box">
@@ -34,7 +37,7 @@ export default function AddEditPanel({addDesign , setAddDesign}) {
         </div>
 
         <div className="btn-box">
-            <button className="clr-btn">Clear All</button>
+            <button className="clr-btn" onClick={handleClearAll}>Clear All</button>
             <button className="submit-btn">Save All</button>
         </div>
     </div>
