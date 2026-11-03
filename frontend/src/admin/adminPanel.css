@@ -131,40 +131,7 @@
     color: var(--color-slate);
 }
 
-.edited-content-box{
-    display: flex;
-    flex-direction: column;
-}
 
-.button-box{
-    width: 100%;
-    display: flex;
-    gap: 10px;
-}
-
-.remove-btn , .change-btn{
-    width: 70%;
-    padding: 5px 0;
-    background-color: rgb(170, 0, 0);
-    color: white;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: 0.4s;
-}
-
-.change-btn{
-    background-color: var(--color-gold-dark);
-}
-
-.change-btn:hover{
-    background-color: var(--color-gold);
-    letter-spacing: 1px;
-}
-
-.remove-btn:hover{
-    background-color: red;
-    letter-spacing: 1px;
-}
 
 /* Laptop / small desktop */
 @media (max-width: 1400px) {
