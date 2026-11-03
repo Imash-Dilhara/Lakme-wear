@@ -50,16 +50,33 @@
 }
 
 .submit-btn{
-    padding: 5px 10px;
+    padding: 5px 20px;
     border: none;
     background-color: var(--color-gold-light);
     border-radius: 5px;
     color: white;
+    transition: 0.4s;
+}
+
+.submit-btn:hover{
+    background-color: var(--color-gold-dark);
+    letter-spacing: 1px;
 }
 
 .clr-btn{
     padding: 5px ;
     background-color: rgba(97, 1, 1, 0.632);
     border-radius: 5px;
+    padding: 5px 10px;
     color: white;
+    transition: 0.4s;
+}
+
+.clr-btn:hover{
+    background-color: rgb(56, 1, 1);
+    letter-spacing: 1px;
+}
+
+.edit-panel-line{
+    
 }
