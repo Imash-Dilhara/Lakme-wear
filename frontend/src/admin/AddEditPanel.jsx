@@ -28,5 +28,10 @@ export default function AddEditPanel({addDesign , setAddDesign}) {
                 <button onClick={() => handleRemoveDesign(index)}>Remove</button>
             </div>
         </div>)}
+
+        <div className="btn-box">
+            <button className="clear-btl">Clear All</button>
+            <button className="submit-btn">Save All</button>
+        </div>
     </div>
 }
