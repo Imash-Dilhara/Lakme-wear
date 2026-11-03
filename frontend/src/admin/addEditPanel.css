@@ -50,7 +50,6 @@
 }
 
 .submit-btn{
-    width: 60%;
     padding: 5px 10px;
     border: none;
     background-color: var(--color-gold-light);
@@ -58,3 +57,9 @@
     color: white;
 }
 
+.clr-btn{
+    padding: 5px ;
+    background-color: rgba(97, 1, 1, 0.632);
+    border-radius: 5px;
+    color: white;
+}

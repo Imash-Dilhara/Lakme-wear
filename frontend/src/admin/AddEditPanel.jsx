@@ -30,7 +30,7 @@ export default function AddEditPanel({addDesign , setAddDesign}) {
         </div>)}
 
         <div className="btn-box">
-            <button className="clear-btl">Clear All</button>
+            <button className="clr-btn">Clear All</button>
             <button className="submit-btn">Save All</button>
         </div>
     </div>
