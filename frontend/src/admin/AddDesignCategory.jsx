@@ -1,31 +1,49 @@
 import './addDesignCategory.css';
+import axios from 'axios'
 
 import { useState } from 'react';
+
+const api_url = import.meta.env.VITE_API_URL;
 
 export default function AddDesignCategory(){
 
     const [addingType , setAddingType] = useState('');
     const [types , setTypes] = useState([
-        'Casual Wear' ,
-        'Party Wear' , 
-        'Office Wear' , 
-        'Formal Wear' , 
-        'Sports Wear' , 
+        // 'Office Wear' , 
+        // 'Formal Wear' , 
+        // 'Sports Wear' , 
         'Lounge Wear' , 
         'Maternty Wear',
     ]);
 
-    const handleCategory = () => {
+    const handleCategory = async() => {
         if(addingType.trim() !== ''){
             setTypes([...types , addingType]);
-            setAddingType('');
+            try{
+                const response = await axios.post(`${api_url}/api/add-category` , {
+                    categoryName: addingType
+                });
+                setAddingType('');
+            }catch(e){
+                console.error(e);
+                alert('Some error to upload to DB!')
+            }
         }
     }
 
-    const handleRemoveCategory = (index) => {
-        const updateTypes = types.filter((item) => item !== index);
-        
-        setTypes(updateTypes);
+    const handleRemoveCategory = async(type) => {
+        try{
+            if(confirm("Do you want to remove this category ? ")){
+                const updateTypes = types.filter((item) => item !== type);
+                
+                const response = await axios.delete(`${api_url}/api/remove-category/${type}`)
+
+                setTypes(updateTypes);
+            }
+        }catch(e){
+            console.error('Remove Category : ',e);
+            alert("Faild remove category!");
+        }
     }
 
     return <div id="design-category" className="design-type-main-box">
@@ -33,7 +51,13 @@ export default function AddDesignCategory(){
 
         <div className="creat-type-content-box">
             <label htmlFor="createCategory">Create Design Category : </label>
-            <input id='createCategory' value={addingType} type="text" placeholder='New design type...' onChange={(e) => setAddingType(e.target.value)}/>
+            <input 
+                id='createCategory' 
+                value={addingType} 
+                type="text" 
+                placeholder='New design type...' 
+                onChange={(e) => setAddingType(e.target.value)}
+            />
             <button onClick={handleCategory}>+</button>
         </div>
 
